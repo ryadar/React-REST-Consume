@@ -3,30 +3,43 @@ import React from 'react';
 
 class App1 extends React.Component {
     users;
-
     constructor(props) {
         super(props);
-
         this.state = {employees: []};
-
-
         this.state = {users: []};
-
         this.headers = [
             {key: 'key'}
         ];
     }
 
+    // fetch(API, { headers: {
+    //     'user-agent': 'Mozilla/4.0 MDN Example',
+    //     'content-type': 'application/json'
+    //   }}).then()
 
     componentDidMount() {
 
-        fetch('https://dev.building.chat/api/role/')
+        const encoded = window.btoa('raja@building.chat:rajaraja'); // encode a string
+
+        console.log(encoded)
+
+        let headers = new Headers();
+
+        headers.append('Content-Type', 'application/json');
+        headers.append('Accept', 'application/json');
+        headers.append('Authorization',"Basic " + encoded);
+        headers.append('Origin','https://dev.building.chat/api/login/');
+
+        fetch('https://dev.building.chat/api/login/',{
+            mode: 'cors',
+            // credentials: 'include',
+            method: 'GET',
+            headers: headers
+        })
             .then(response => {
                 return response.json();
             }).then(result => {
-
-            this.headers = result;
-
+            //this.headers = result;
             console.log(result)
 
             // this.headers.map(function (item,key) {
@@ -42,7 +55,7 @@ class App1 extends React.Component {
             });
 
 
-        });
+        }).catch(error=>console.error(error.message));
     }
 
     render() {

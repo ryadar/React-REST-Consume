@@ -1,9 +1,100 @@
-@media all and (min-width: 480px) {
-    .Login {
-        padding: 60px 0;
-    }
-    .Login form {
-        margin: 0 auto;
-        max-width: 320px;
-    }
+.LogIn {
+    text-align: center;
+}
+
+.ContainerCls {
+    background-color: #f0f0f0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.LogInCls {
+    /* display: flex; */
+    align-items: center;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+    margin-top: 10%;
+    max-width: 350px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+}
+
+.OutPopUp {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+}
+
+.BuildingChatIcon {
+    font-size: 14px !important;
+    height: 200px;
+    margin: auto;
+    width: 160px;
+    background-image: url('bchat_full.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Center2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FormCls {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.EmailText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+.Center {
+    text-align: center;
+}
+
+.Center1 {
+    height: 20px;
+    width: 100px;
+    margin: -20px -50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.Test {
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
 }
