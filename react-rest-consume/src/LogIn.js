@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './LogIn.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import Button from '@material/react-button';
 
 import Home from './Home';
 
@@ -133,7 +134,7 @@ class LogIn extends Component {
                     return response.json();
                 }).then(result => {
                 //this.headers = result;
-                // console.log("sucess")
+
                 // window.alert("sucess")
 
                 if (result.detail != undefined) {
@@ -144,6 +145,9 @@ class LogIn extends Component {
                         isLoggedIn: true,
                         user: result
                     })
+
+                    console.log("toekn"+ this.state.user.token.key)
+
                 }
 
                 console.log(result)
@@ -234,9 +238,9 @@ class LogIn extends Component {
                                 </div>
                                 <div className="container-fluid">
                                     <div className="col-sm-12 text-center">
-                                        <button type="submit" className="btn form-control-buttom center-block"
+                                        <Button type="submit" className="btn form-control-buttom center-block"
                                                 onClick={this.clickOnLogInButton}>Login
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                             </form>
@@ -275,7 +279,6 @@ class LogIn extends Component {
                                                     {item.property.full_address}
                                                 </li>)
                                         }
-
                                     }
 
                                 })
