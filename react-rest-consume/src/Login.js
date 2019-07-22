@@ -108,7 +108,7 @@ class LogIn extends Component {
             })
     }
     clickOnLogInButton = event => {
-        event.preventDefault();
+        event.preventDefault(); ;
         if (this.validateForm()){
             console.log(this.state.email)
             console.log(this.state.password)
